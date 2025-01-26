@@ -8,7 +8,7 @@ from werkzeug.utils import secure_filename
 import tempfile
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/predict": {"origins": "https://dog-identifier-react.onrender.com"}})
 
 
 # Load the trained model
